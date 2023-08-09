@@ -36,6 +36,13 @@ namespace DogsMvc.Controllers
 			return RedirectToAction(nameof(Index));
 		}
 
+		[HttpGet("Edit/{id}")]
+		public IActionResult Edit(int id)
+		{ 
+			var dog = dataService.GetDogById(id);
+			return View(dog);
+		
+		}
 		
 
 

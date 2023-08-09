@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Views\Edit\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
