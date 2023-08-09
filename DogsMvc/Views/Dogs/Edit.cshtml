@@ -8,14 +8,13 @@
 <title>Show Form</title>
 </head>
 <body>
-    <h1>Add Dog</h1>
+    <h1>Edit Dog Info</h1>
     <form @*action="/confirmationwindow"*@ method="post">
         <div>This is the current info of @Model.Name</div>
         <div>
 
         <p>ID: @Model.Id</p>
-        <p><label>New ID:</label>
-        <input type="text" name="Id"/> </p>
+        <input type="hidden" name="Id" value="@Model.Id" />
 
         <p>Name: @Model.Name</p>
         <label>New Name:</label>
@@ -25,7 +24,7 @@
         <p><label>New Age:</label>
         <input type="text" name="Age"/></p>
 
-        <p><input type="submit" name="Save"/></p>
+        <p><input type="submit" name="Edit"/></p>
 
         </div>
 

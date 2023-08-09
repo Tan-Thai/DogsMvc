@@ -35,10 +35,18 @@ namespace DogsMvc.Controllers
 		{ 
 			var dog = dataService.GetDogById(id);
 			return View(dog);
-		
+
 		}
-		
 
+        [HttpPost("Edit/{id}")]
+        public IActionResult Edit(Dog updatedDog)
+        {
+            var oldDog = dataService.GetDogById(updatedDog.Id);
+			dataService.RemoveDog(oldDog);
+			dataService.AddDog(updatedDog);
+            return RedirectToAction(nameof(Index));
 
-	}
+        }
+
+    }
 }
