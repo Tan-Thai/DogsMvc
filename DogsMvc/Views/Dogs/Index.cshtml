@@ -1,19 +1,18 @@
 ﻿@model DogsMvc.Models.Dog[]
+
 <!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<meta charset="utf-8" />
-	<title></title>
+<meta charset="utf-8"/>
 </head>
 <body>
-	<h2>Bands</h2
-	<span>@DateTime.Now</span>
-	  <ul>
-		@foreach (var item in Model)
-		{
-			<li><a href="detail/@item.Id">@item.Name </a></li>
-		}
-	  </ul>
+    <h1>All Current dogs</h1>
+    <ul>
+        @foreach (var dog in Model)
+        {
+            <li><a>@dog.Name</a></li>
+        }
+    </ul>
 </body>
 </html>

@@ -2,26 +2,39 @@
 
 namespace DogsMvc.Models
 {
-    public class DataService
-    {
-        List<Dog> dogs = new List<Dog>();
+	public class DataService
+	{
+		private List<Dog> dogs = new List<Dog>()
+		{
+			new Dog()
+			{
+				Id = 301,
+				Name = "Siberian Husky",
+				Age = 4
+			},
+			new Dog()
+			{
+				Id = 196,
+				Name = "Poodle",
+				Age = 2
+			},
+            new Dog()
+            {
+                Id = 51,
+                Name = "German Shepherd",
+                Age = 8
+            }
+        };
 
-        public Dog[] AddDog(Dog dog)
-        {
-            dogs.Add(dog);
-            return dogs.ToArray();
-        }
 
-        public Dog[] GetAllDogs()
-        {
-            return dogs.ToArray();
-        }
+		public void AddDog(Dog newDog)
+		{
+			dogs.Add(newDog);
+		}
 
-        public Dog GetDogById(int id)
-        {
-            var d = dogs
-                .First(o => o.Id == id);
-            return d;
-        }
-    }
+		public Dog GetDogById(int id) => dogs.SingleOrDefault(d => d.Id == id);
+
+		public Dog[] GetAllDogs() => dogs.ToArray();
+
+	}
 }
