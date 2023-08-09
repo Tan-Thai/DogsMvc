@@ -16,5 +16,22 @@ namespace DogsMvc.Controllers
 			var viewDogList = dataService.GetAllDogs();
 			return View(viewDogList);
 		}
+
+		[HttpGet("/dogs/create")]
+		public IActionResult Create()
+		{ 
+			return View();
+		}
+
+		[HttpPost("/dogs/create")]
+		public IActionResult Create(Dog dog) 
+		{
+			dataService.AddDog(dog);
+			return RedirectToAction(nameof(Index));
+		}
+
+		
+
+
 	}
 }

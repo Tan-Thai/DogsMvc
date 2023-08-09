@@ -1,0 +1,26 @@
+﻿@model DogsMvc.Models.Dog[]
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8"/>
+<title>Show Form</title>
+</head>
+<body>
+    <h1>Add Dog</h1>
+    <form @*action="create"*@ method="post">
+        <label>Dog ID:</label>
+        <input type="text" name="Id"/>
+
+        <label>Dog Name:</label>
+        <input type="text" name="Name"/>
+
+        <label>Dog Age:</label>
+        <input type="text" name="Age"/>
+
+        <input type="submit" name="Save"/>
+
+    </form>
+</body>
+</html>
