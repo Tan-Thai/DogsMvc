@@ -11,7 +11,7 @@
     <ul>
         @foreach (var dog in Model)
         {
-            <li>@dog.Name</li>
+                    <li>@dog.Name  <a href="Edit/@(dog.Id)">Update</a></li>
         }
     </ul>
     <div><a href="dogs/create">Input new dog</a></div>

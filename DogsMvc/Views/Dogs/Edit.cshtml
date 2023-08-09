@@ -1,0 +1,34 @@
+﻿@model DogsMvc.Models.Dog
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8"/>
+<title>Show Form</title>
+</head>
+<body>
+    <h1>Add Dog</h1>
+    <form @*action="/confirmationwindow"*@ method="post">
+        <div>This is the current info of @Model.Name</div>
+        <div>
+
+        <p>ID: @Model.Id</p>
+        <p><label>New ID:</label>
+        <input type="text" name="Id"/> </p>
+
+        <p>Name: @Model.Name</p>
+        <label>New Name:</label>
+        <input type="text" name="Name"/></p>
+
+        <p>Age: @Model.Age</p>
+        <p><label>New Age:</label>
+        <input type="text" name="Age"/></p>
+
+        <p><input type="submit" name="Save"/></p>
+
+        </div>
+
+    </form>
+</body>
+</html>
