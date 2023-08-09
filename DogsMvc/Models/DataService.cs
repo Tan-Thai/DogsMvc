@@ -1,4 +1,6 @@
-﻿namespace DogsMvc.Models
+﻿using System.Reflection.Metadata.Ecma335;
+
+namespace DogsMvc.Models
 {
 	public class DataService
 	{

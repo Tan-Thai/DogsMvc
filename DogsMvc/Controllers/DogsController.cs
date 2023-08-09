@@ -10,7 +10,13 @@ namespace DogsMvc.Controllers
         {
         }
 
+        //public BandsController()
+        //{
+        //    dataService = new DataService();
+        //}
+
         [HttpGet("")]
+        //[HttpGet("index.php")]
 		public IActionResult Index()
 		{
 			var viewDogList = dataService.GetAllDogs();

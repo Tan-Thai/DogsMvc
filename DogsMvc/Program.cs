@@ -1,4 +1,5 @@
-namespace DogsMvc
+using System.Security.Cryptography;
+namespace BandsMvc
 {
 	public class Program
 	{
