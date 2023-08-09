@@ -1,15 +1,18 @@
-namespace DogsMvc
+using System.Security.Cryptography;
+namespace BandsMvc
 {
-	public class Program
-	{
-		public static void Main(string[] args)
-		{
-			var builder = WebApplication.CreateBuilder(args);
-			var app = builder.Build();
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            var builder = WebApplication.CreateBuilder(args);
+            builder.Services.AddControllersWithViews();
 
-			app.MapGet("/", () => "Hello World!");
-
-			app.Run();
-		}
-	}
+            var app = builder.Build();
+            app.UseRouting();
+            app.UseEndpoints(endpoints => endpoints.MapControllers());
+            app.Run();
+        }
+    }
 }
+
