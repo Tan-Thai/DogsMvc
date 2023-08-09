@@ -23,12 +23,21 @@ namespace DogsMvc.Controllers
 			return View(viewDogList);
 		}
 
-        //[HttpGet("detail/{id}")]
-        //public IActionResult Detail(int id)
-        //{
-        //    var band = dataService.GetDogById(id);
-        //    return View(band);
-        //    //return Content($"ID:{band.Id}, Band:{band.Name}, Genre:{band.Description}");
-        //}
+		[HttpGet("/dogs/create")]
+		public IActionResult Create()
+		{ 
+			return View();
+		}
+
+		[HttpPost("/dogs/create")]
+		public IActionResult Create(Dog dog) 
+		{
+			dataService.AddDog(dog);
+			return RedirectToAction(nameof(Index));
+		}
+
+		
+
+
 	}
 }
