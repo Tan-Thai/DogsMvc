@@ -34,5 +34,10 @@
 
 		public Dog[] GetAllDogs() => dogs.ToArray();
 
-	}
+        public void RemoveDog(Dog dogToRemove)
+        {
+            dogs.Remove(dogToRemove);
+        }
+        //a method that takes out the dogs prop and replaces it with the new information.
+    }
 }
